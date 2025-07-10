@@ -8,10 +8,21 @@
     <button onclick="alert('直スクリプト！');">要素に直でスクリプト</button>
     <button onclick="al2()">scriptからスクリプト</button>
     <button onclick="al3()">外部ファイルでスクリプト</button>
+
+    <label>input + button</label><input id="in1"><button onclick="writeIn(1)">input show</button>
+    <label>input + onchange</label><input id="in2"><button onclick="writeIn(2)">input show(手動用)</button>
+
+    <p id="input-shower">none</p>
   </body>
   <script>
     function al2(){
       alert("scriptから！");
+    }
+    function writeIn(num) {
+      const p = document.getElementById("input-shower");
+      const inp = document.getElementById("in" + num).value;
+      p.innerHTML = inp;
+      alert(inp);
     }
   </script>
 </html>
