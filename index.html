@@ -5,10 +5,11 @@
     <script src="./script.js"></script>
   </head>
   <body>
-    <button onclick="alert('直スクリプト！');">要素に直でスクリプト</button><br>
-    <button onclick="al2()">scriptからスクリプト</button><br>
+    <button onclick="alert('直スクリプト！');">要素に属性に直でスクリプト</button><br>
+    <button onclick="al2()">script要素内からスクリプト</button><br>
     <button onclick="al3()">外部ファイルでスクリプト</button><br>
 
+    <h2>以下は外部スクリプト</h2>
     <label>input + button</label><input id="in1"><button onclick="writeIn(1)">input show</button><br>
     <label>input + onchange</label><input id="in2"><button onclick="writeIn(2)">input show(手動用)</button><br>
 
@@ -16,21 +17,8 @@
   </body>
   <script>
     function al2(){
-      alert("scriptから！");
+      alert("script要素内から！");
     }
-    function writeIn(num) {
-      try{
-      const p = document.getElementById("input-shower");
-      const inp = document.getElementById("in" + num).value;
-      p.innerHTML = inp;
-      alert(inp);
-      }catch(e) {
-        alert(e);
-      }
-    }
-
-  document.getElementById("in2").addEventListener("change", (event) => {
-    writeIn(2);
-  });
+    
   </script>
 </html>
