@@ -12,7 +12,3 @@ function writeIn(num) {
     alert(e);
   }
 }
-
-  document.getElementById("in2").addEventListener("change", (event) => {
-    writeIn(2);
-  });
