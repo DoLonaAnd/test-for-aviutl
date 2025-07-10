@@ -14,6 +14,15 @@
     <label>input + onchange</label><input id="in2"><button onclick="writeIn(2)">input show(手動用)</button><br>
 
     <p id="input-shower">none</p>
+
+    <hr>
+    
+    <h2>以下は埋め込みscript要素</h2>
+    <label>DOM操作</label><button onclick="genP()">gen p</button>
+    <label>innerHTMLでp追加</label><button onclick="genP(2)">gen p</button>
+    <div id="p-area">
+      <p>以下にp要素生成。</p>
+    </div>
   </body>
   <script>
     function al2(){
@@ -24,5 +33,15 @@
       writeIn(2);
     });
 
+    function genP(){
+      const ele = document.createElement("p");
+      const tn = document.createTextNode("新たなp！");
+      ele.appendChild(tn);
+      document.getElementById("p-area").appendChild("tn");
+    }
+    
+    function genP2(){
+      document.getElementById("p-area").innerHTML += "<p>新たなp！(text)</p>";
+    }
   </script>
 </html>
